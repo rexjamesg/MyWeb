@@ -5,8 +5,21 @@
 <title>林於豊 Rex Lin</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script src="js/mobileJs.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Orbitron|Open+Sans' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/autobioCss.css">
+<link href='https://fonts.googleapis.com/css?family=Orbitron|Open+Sans' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+
+	var timesecond = new Date().getTime();
+	console.log(timesecond);
+
+	var cssUrl = "css/autobioCss.css?v"+timesecond
+	$(document).ready(function(){
+		$("#cssUrl").attr("href",cssUrl);
+	})
+
+</script>
+
+<link id="cssUrl" rel="stylesheet">
 <script>
 
 	//var scaleAnimate = true;
@@ -132,7 +145,7 @@
 					<div ><h3>大學的生活跟大部分的人都一樣，上課、打工、與朋友玩樂，但是他對未來還是充滿了迷網。</h3></div>
 					<div ><h3>畢業後入伍，度過了為期一年的軍旅生涯，他當了士官也曾參與救災，這使得他變得更加成熟穩重，勇於面對新事物。</h3></div>
 					<div ><h3>退伍後，他像一般新鮮人一樣不斷的思索自己的未來，所以決定與軍中認識的朋友申請澳洲打工度假，一起出國冒險，探索自己的目標。</h3></div>
-					<div ><h3>在澳洲不但買了二手車，同時也賺了一筆旅費順利的從伯斯開車前往墨爾本，順利的完成3300公里的路程，他們也在葡萄農場完成了一季的工作，獲得了農場主人的讚賞。</h3></div>
+					<div ><h3>在澳洲不但買了二手車，同時也賺了一筆旅費順利的從伯斯開車前往墨爾本，完成3300公里的路程，他們也在葡萄農場完成了一季的工作，獲得了農場主人的讚賞。</h3></div>
 					<div ><h3>由於在國外不論生活或旅的問題都靠著網頁及APP的資訊順利解決，這激起了他對程式設計的興趣，於是回國後他報名了資策會的課程，結訓後決心往程式設計這條路發展。</h3></div>
 			</div>
 			
@@ -143,7 +156,7 @@
 	<!-- slider end-->
 	
 		<div style="height: 100px;">
-			<a href="about.php"><div id="hireMe"><h3>這位男孩叫做林於豊，如果您有興趣，這裡可以了解更多<h3></div></a>
+			<a href=""><div id="hireMe"><h3>這位男孩叫做林於豊，如果您有興趣，這裡可以了解更多<h3></div></a>
 		</div>
 	
 	</div>
