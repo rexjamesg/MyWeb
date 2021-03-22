@@ -1,0 +1,281 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0px;
+	/* background-color: rgb(21, 23, 25); */
+}
+
+p{
+	font-family: OpenSans;
+	line-height: 25px;
+}
+
+h1, h2, h3{
+	font-family: 'Orbitron';
+	line-height: 25px;
+}
+
+#header {
+	width: 100%;
+	height: 70px;
+	background-color: rgb(49, 50, 52);
+	transition: 0.5s;
+	z-index: 10;
+	position: fixed;
+}
+
+#entrances {
+	width: 960px;
+	margin: auto;
+}
+
+#entrances ul{
+	margin: 0;
+	padding: 0;
+}
+
+#entrances ul li {
+	font-family: 'Orbitron';
+	font-size: 25px;
+	width: 22%;
+	margin: 22px auto auto 3%;
+	height: 30px;
+	float: left;
+	text-align: center;
+	transition: 0.2s;
+	color: white;
+	list-style-type: none;
+}
+
+#entrances ul:first-child {
+	margin-left: 0%;
+}
+
+#now a{
+	color: rgb(9, 131, 164);
+}
+
+#entrances div p{
+	margin: 0 auto 0 auto;
+}
+
+#entrances ul li a:hover{
+	color: rgb(139, 166, 177);
+}
+
+#slider h1{
+	font-family: Orbitron;
+	font-size: 70px;
+	margin: 400px auto auto 400px ;
+	position: absolute;
+	color: white;
+}
+
+#wrapper {
+	width: 960px;
+	margin: auto;
+}
+
+.circleImg{
+	border: 0px solid transparent;
+	border-radius: 50%;
+}
+
+.block h1{
+	font-family: Orbitron;
+	font-size: 35px;
+	top: 70px;
+	text-align: center;
+	position: relative;
+}
+
+.underLine{
+	width: 100px;
+	height: 1px;
+	background-color: #A1A5AB;
+}
+
+.block{
+	width: 960px;
+	height: 600px;
+	margin: auto;
+	position: relative;
+}
+
+.blockLeft{
+	width: 47.5%;
+	float: left;
+	margin-top: 5%;
+}
+
+.blockRight{
+	width: 47.5%;
+	float: right;
+	margin-top: 5%;
+}
+
+#blockA{
+	/* background-color: rgb(49, 50, 52); */
+	/* background-color: #1E2329; */
+}
+
+.cloud{
+	position: absolute;
+	width: 300px;
+	height: 100px;
+	background-color: #dedede;
+	transition: 0.5s;
+	overflow: hidden;
+}
+
+#c2{
+	top: 200px;
+}
+
+#skillLogos{
+	position: relative;
+	margin: 10% auto auto 3%;
+}
+
+#skillLogos img{
+	padding-left: 1.5%;
+	padding-right: 1.5%;
+	width: 20%;
+    transition: 0.5s;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    float: left;   
+}
+
+#blockB{
+	
+}
+
+#blockC{
+	/* background-color: rgb(49, 50, 52); */
+	/* background-color: #1E2329; */
+}
+
+#blockD{
+
+}
+
+.clear {
+	clear: both;
+}
+
+#footer {
+	padding: 1px 0;
+	width: 100%;
+	background-color: rgb(49, 50, 52);
+	height: 100px;
+}
+
+#personalInfo{
+	width: 960px;
+	margin: auto;
+}
+
+#personalInfo div{
+	width: 30%;
+	margin: 3% 1%;
+	color: white;
+	float: left;
+	text-align: center;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+/*changeCloth slider part*/
+
+#naked{
+	position: absolute;
+}
+
+#slideShow{
+	top: 70px;
+	background-color: transparent;
+	position: relative;
+	width: 385px;
+	margin: auto;
+}
+
+.slider{
+	overflow: hidden;
+	width: 400px;
+	height: 400px;
+	/*margin: auto;*/
+	position: relative;
+}
+
+.slider  ul {
+    -webkit-transition: 0.5s left;
+    -moz-transition: 0.5s left;
+    -ms-transition: 0.5s left;
+    -o-transition: 0.5s left;
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+    position: relative;
+  }
+  
+  .slider  ul  li {
+      float: left;
+      width: 400px; 
+      height: 400px;
+ }
+ 
+ .sliderControl{
+	cursor: pointer;
+ }
+ 
+ .sliderControl div:hover{
+ 	transform: scale(1.3);
+ 	transition: 0.3s;
+ }
+ 
+ #prev{
+ 	position: absolute;
+ 	z-index: 9;
+ 	top: 250px;
+ }
+ 
+ #next{
+ 	position: absolute;
+ 	top: 250px;
+ 	z-index: 9;
+ 	margin-left: 365px;
+ }
+ 
+ 
+ /*hobbies page*/
+ 
+ .collection{
+		width: 18.75%;
+		height: 200px;
+		margin: 10% auto auto 5%;
+		background-color: #3b5998;
+		border: 5px #3b5998 solid;
+		float: left;
+ }
+ 
+ .collection:hover{
+		background-color: #8b9dc3;
+ }
+ 
+ #hobbiesPart{
+		width: 960px;
+		margin: auto;
+ }
+ 
+ #indicator{
+		position: relative;
+		margin: 5% auto auto 50%;
+		display: none;
+ }
+
+.clear{
+	clear: both;
+}

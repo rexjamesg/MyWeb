@@ -1,0 +1,166 @@
+<?php
+ include "reference.php";
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>林於豊 Rex Lin</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src=<?php echo $mobileJs?>></script>
+<link href='http://fonts.googleapis.com/css?family=Orbitron|Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href=<?php echo $mainCss ?>>
+<script>
+
+	//var scaleAnimate = true;
+	
+	$(document).ready(function() {
+		
+		//$(window).bind("scroll", headerFixed);
+		//$(window).bind("scroll", cloudShift);
+		//-100 * index%
+		
+		var index = 0;
+		var slider = $(".slider ul");
+		var liCount = $(".back ul").children().length;
+		slider.width(500*liCount);
+		$(".slider ul").css("left", "0%");
+		$("#prev").css("display", "none");
+		$(".subtitle div:nth-child(1)").css("display", "block");
+
+			
+		$("#next").on("click", function (){
+			if (index < liCount-1){
+				index += 1;
+			}
+			
+			if(index ==  liCount-1){
+				$("#next").css("display", "none");
+				$("#hireMe").fadeIn();
+				 
+			}else{
+				$("#prev").css("display", "block");
+			}
+			
+			subtitleDisplay(index+1);
+			
+			var shift = '-' + (100 * index) + '%';
+			$(".slider ul").css("left", shift);
+			
+		});
+		
+		
+		$("#prev").on("click", function (){
+			if (index !=0 ){
+				index -= 1;
+			}
+		
+			if(index == 0){
+				$("#prev").css("display", "none");
+			}else{
+				$("#next").css("display", "block");
+			}
+			
+			subtitleDisplay(index+1);
+		
+			var shift = '-' + (100 * index) + '%';
+			$(".slider ul").css("left", shift);
+			
+		});
+		
+	});
+	
+	function subtitleDisplay(childNum){
+		$(".subtitle").children().css("display", "none");
+		$(".subtitle div:nth-child("+childNum+")").fadeIn();
+	}
+
+
+</script>
+</head>
+<body>
+	<div id="header">
+		<div id="entrances">
+			<ul>		
+				<li id="now"><a href="index.php">Home</a></li>
+				<li><a href="about.php">About</a></li>
+				<li ><a href="works.php">Works</a></li>
+				<li><a href="resources.php">Resources</a></li>
+			</ul>	
+		</div>
+	</div>
+	
+	<div id="wrapper">
+	
+		<div id="slideShow">
+		
+			<div class="sliderControl">
+				<div id="prev"><img src="images/paperDoll/arrowLeft.png"></div>
+				<div id="next"><img src="images/paperDoll/arrowRight.png"></div>
+			</div>		
+		
+		<div class="slider back">
+			<ul>
+				<li><div style="width: 770px"></div></li>
+				<li><img src="images/paperDoll/school.jpg"></li>
+				<li><img src="images/paperDoll/restaurant.jpg"></li>
+				<li><img src="images/paperDoll/campWall.jpg"></li>
+				<li><img src="images/paperDoll/airport.jpg"></li>
+				<li><img src="images/paperDoll/farm.jpg"></li>
+				<li><img src="images/paperDoll/class.jpg"></li>
+			</ul>
+		</div>
+		
+		<div id="naked">
+			<img src="images/paperDoll/me.png">
+		</div>
+		
+		<div class="slider">
+			<ul>
+				<li><img src="images/paperDoll/interview.png"></li>
+				<li><img src="images/paperDoll/graduate.png"></li>
+				<li><img src="images/paperDoll/partTime.png"></li>
+				<li><img src="images/paperDoll/army.png"></li>
+				<li><img src="images/paperDoll/workingHoliday.png"></li>
+				<li><img src="images/paperDoll/farmWork.png"></li>
+				<li><img src="images/paperDoll/app.png"></li>
+			</ul>
+		</div>
+		
+		<div class="clear"></div>
+		
+			<div class="subtitle">
+					<div ><h3>為什麼要學程式 ? 每個人都有自己一段故事，接下來要說一個生於小康家庭的普通男孩所經歷的歷程。</h3></div>
+					<div ><h3>他畢業於僑光科技大學應用外語系，主修的是英文，在校成績中等，雖然愛玩不過對自己的成績相當負責。</h3></div>
+					<div ><h3>大學的生活跟大部分的人都一樣，上課、打工、與朋友玩樂，但是他對未來還是充滿了迷網。</h3></div>
+					<div ><h3>畢業後入伍，度過了為期一年的軍旅生涯，他當了士官也曾參與救災，這使得他變得更加成熟穩重，勇於面對新事物。</h3></div>
+					<div ><h3>退伍後，他像一般新鮮人一樣不斷的思索自己的未來，所以決定與軍中認識的朋友申請澳洲打工度假，一起出國冒險，探索自己的目標。</h3></div>
+					<div ><h3>在澳洲不但買了二手車，同時也賺了一筆旅費順利的從伯斯開車前往墨爾本，順利的完成3300公里的路程，他們也在葡萄農場完成了一季的工作，獲得了農場主人的讚賞。</h3></div>
+					<div ><h3>由於在國外不論生活或旅的問題都靠著網頁及APP的資訊順利解決，這激起了他對程式設計的興趣，於是回國後他報名了資策會的課程，結訓後決心往程式設計這條路發展。</h3></div>
+			</div>
+			
+		</div>
+		
+		<div style="height: 1px; margin-top: 10%;"></div>
+	
+	<!-- slider end-->
+	
+		<div style="height: 100px;">
+			<a href="about.php"><div id="hireMe"><h3>這位男孩叫做林於豊，如果您有興趣，這裡可以了解更多<h3></div></a>
+		</div>
+	
+	</div>
+
+	
+	<div id="footer">
+		<div id="personalInfo">		
+					<div><img style="background-color: #08c;" class="icon"src="images/paperDoll/phone.png"><h4>0933-534-105</h4></div>
+					<div><img style="background-color: #FF2D2D;" class="icon"src="images/paperDoll/email.png"><h4>rexjamesg@gmail.com</h4></div>
+					<div><img style="background-color: #3a5795;" class="icon"src="images/paperDoll/fb.png"><h4>rexjamesg@gmail.com</h4></div>	
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+</body>
+</html>
